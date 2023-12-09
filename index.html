@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+</head>
+<body>
+
+<form id="meuFormulario">
+  <label for="campoA">Campo A:</label>
+  <input type="number" id="campoA" name="campoA" required>
+
+  <label for="campoB">Campo B:</label>
+  <input type="number" id="campoB" name="campoB" required>
+
+  <button type="button" onclick="validarFormulario()">Enviar</button>
+</form>
+
+<script>
+  function validarFormulario() {
+    var campoA = document.getElementById('campoA').value;
+    var campoB = document.getElementById('campoB').value;
+
+    if (parseFloat(campoB) > parseFloat(campoA)) {
+      alert('Formulário válido!');
+    } else {
+      alert('Formulário inválido!');
+    }
+  }
+</script>
+
+</body>
+</html>
